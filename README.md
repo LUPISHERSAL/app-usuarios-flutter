@@ -28,35 +28,37 @@ Esto permite al usuario filtrar la lista en tiempo real conforme va escribiendo,
 
 ## Tecnologías y herramientas utilizadas
 
-- **Flutter** con Material Design.
-- **Provider** para el manejo de estado.
-- **HTTP** para consumir la API.
-- **Diseño responsivo** para adaptarse a distintos tamaños de pantalla.
+- **Flutter**: Framework principal para la construcción de interfaces nativas.
+- **Material Design**: Estándar de diseño visual utilizado en la interfaz.
+- **Provider**: Manejador de estado utilizado para controlar el flujo de datos y la respuesta de la interfaz.
+- **HTTP**: Paquete para realizar peticiones a servicios externos.
+- **Arquitectura por capas**: Separación de responsabilidades entre modelo, proveedor, lógica de presentación y componentes visuales.
 
 ---
 
 ## Estructura del proyecto
-La aplicación está organizada en carpetas según la responsabilidad de cada archivo:
 
 - **lib/main.dart**  
-  Punto de entrada de la aplicación. Aquí se configura el tema, el provider y la pantalla inicial.
+  Punto de entrada de la aplicación. Define el tema general, el manejador de estado y la pantalla inicial.
 
 - **lib/models/**  
-  Contiene el modelo de datos:
-  - user.dart → Representa la estructura de un usuario obtenido de la API.
+  Contiene los modelos de datos:  
+  `user.dart`: Representa la estructura de un usuario proveniente de la API.
 
 - **lib/providers/**  
-  Contiene la lógica de negocio y conexión con la API:
-  - user_provider.dart → Obtiene la lista de usuarios desde JSONPlaceholder.
+  Contiene la lógica de negocio:  
+  `user_provider.dart`: Encargado de obtener los usuarios y exponerlos a la interfaz mediante Provider.
 
 - **lib/pantallas/**  
-  Contiene las pantallas completas que ve el usuario:
-  - pantalla_inicio.dart → Muestra la lista de usuarios.
-  - pantalla_detalle.dart → Muestra los detalles del usuario seleccionado.
+  Agrupa las pantallas completas visibles por el usuario:  
+  `pantalla_inicio.dart`: Lista principal de usuarios, incluye el campo de búsqueda.  
+  `pantalla_detalle.dart`: Detalle completo de un usuario específico.
 
 - **lib/widgets/**  
-  Componentes visuales reutilizables:
-  - item_usuario.dart → Widget que representa cada usuario en forma de tarjeta.
+  Componentes visuales reutilizables:  
+  `item_usuario.dart`: Tarjeta visual que representa un usuario individual dentro de la lista.
+
+---
 
 ## Cómo ejecutar la aplicación
 
@@ -68,13 +70,16 @@ La aplicación está organizada en carpetas según la responsabilidad de cada ar
 flutter pub get
 flutter run
 
+---
+
 ## API utilizada
-La API utilizada es pública y gratuita:
-https://jsonplaceholder.typicode.com/users
+Para las imágenes de los usuarios, se utilizó el servicio de imágenes generado dinámicamente en https://i.pravatar.cc, utilizando el ID del usuario.
+
+---
 
 ## Decisiones técnicas
-- Se eligió Provider por su simplicidad para manejar estados reactivos.
-
-- Se usó la imagen de https://i.pravatar.cc para simular avatares únicos por ID.
-
+- Se eligió Provider por su facilidad de implementación, documentación y compatibilidad con arquitecturas limpias.
+- Se simuló la imagen de los usuarios usando https://i.pravatar.cc, generando un avatar único por ID.
+- Se mantuvo una estructura clara y modular, facilitando la escalabilidad del código.
+- Se añadió un campo de búsqueda para filtrar usuarios por nombre, a fin de mejorar la experiencia del usuario.
 - Se organizó el código por carpetas (modelo, proveedor, pantallas y widgets) para mejorar el mantenimiento
