@@ -1,14 +1,28 @@
 # Aplicación Flutter - Usuarios desde JSONPlaceholder
 
-Esta aplicación es parte de una prueba técnica para Carvel Maquinaria. El objetivo fue crear una aplicación simple en Flutter que consuma una API pública y muestre información en una interfaz amigable.
+Esta aplicación fue desarrollada como parte de una prueba técnica para Carvel Maquinaria. Su propósito es mostrar el consumo de una API pública utilizando Flutter, presentando los datos en una interfaz sencilla, ordenada y funcional.
 
 ---
 
 ## ¿Qué hace la aplicación?
 
-- Consulta una lista de usuarios desde la API pública [JSONPlaceholder](https://jsonplaceholder.typicode.com/users).
-- Muestra los usuarios en una lista con nombre, correo e imagenr.
-- Al tocar un usuario, navega a una pantalla con más detalles: teléfono, sitio web, dirección y empresa.
+La aplicación realiza las siguientes acciones:
+
+- Consume la API pública [JSONPlaceholder](https://jsonplaceholder.typicode.com/users) para obtener una lista de usuarios.
+- Muestra los usuarios en una lista dinámica que incluye su nombre, correo electrónico e imagen.
+- Al seleccionar un usuario, se navega a una pantalla de detalle que presenta información adicional, como:
+  - Nombre de usuario
+  - Teléfono
+  - Sitio web
+  - Dirección completa
+  - Empresa y lema corporativo
+
+---
+
+## Característica adicional implementada
+
+Como mejora de diseño adicional, se implementó una funcionalidad de búsqueda por nombre en la pantalla principal.  
+Esto permite al usuario filtrar la lista en tiempo real conforme va escribiendo, mejorando significativamente la experiencia de uso.
 
 ---
 
