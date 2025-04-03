@@ -73,6 +73,9 @@ flutter run
 ---
 
 ## API utilizada
+La fuente de datos es pública y gratuita:
+- Endpoint: https://jsonplaceholder.typicode.com/users
+
 Para las imágenes de los usuarios, se utilizó el servicio de imágenes generado dinámicamente en https://i.pravatar.cc, utilizando el ID del usuario.
 
 ---
